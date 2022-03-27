@@ -1,0 +1,28 @@
+
+<main class="game">
+    <header>
+        Jokenpo
+    </header>
+
+    <section class="game-painel">
+        <p *ngIf="!option; else hasChoosenOption">Escolha uma opção!</p>
+        <ng-template #hasChoosenOption>
+            Isto! Você escolheu {{name}}
+        </ng-template>
+    </section>
+
+    <section class="game-container">
+        <p *ngIf="option; else ChoosenOption">
+            {{result}}
+        </p>
+        <ng-template #ChoosenOption>
+            <app-game-option [option]="'rock'" (clickEmit)="runGame($event)"></app-game-option>
+            <app-game-option [option]="'paper'" (clickEmit)="runGame($event)"></app-game-option>
+            <app-game-option [option]="'scissor'" (clickEmit)="runGame($event)"></app-game-option>
+        </ng-template>
+    </section>
+
+    <footer>
+        Feito por Christian de Oliveira Silva
+    </footer>    
+</main>

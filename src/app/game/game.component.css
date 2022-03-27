@@ -1,0 +1,37 @@
+
+
+main.game {
+    padding: 75px 45px;
+}
+
+main.game > header{
+    text-align: center;
+    font-size: 50px;
+}
+
+section.game-painel {
+    margin-top: 150px;
+    text-align: center;
+}
+
+section.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+
+section.game-container > app-game-option{
+    flex: 0 1 150px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    padding: 25px;
+    cursor: pointer;
+}
+
+main.game > footer {
+    text-align: right;
+}
